@@ -1,0 +1,40 @@
+{
+    "name": "lakefire",
+    "displayName": "Lakefire",
+    "description": "Lakefire template language support",
+    "version": "0.0.1",
+    "publisher": "Adrien Gicquel",
+    "engines": {
+        "vscode": "^1.33.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "icon": "icon.png",
+    "contributes": {
+        "languages": [
+            {
+                "id": "lkf",
+                "aliases": [
+                    "lakefire",
+                    "lkf"
+                ],
+                "extensions": [
+                    ".lkf"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "lkf",
+                "scopeName": "source.lkf",
+                "path": "./syntaxes/lkf.tmLanguage.json",
+                "embeddedLanguages": {
+                    "meta.embedded.block.javascript": "javascript",
+                    "meta.embedded.inline.javascript": "javascript"
+                }
+            }
+        ]
+    }
+}
